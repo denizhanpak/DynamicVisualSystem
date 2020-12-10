@@ -11,7 +11,7 @@ parser.add_argument('video_file', type=str, nargs=1,
                     help='/path/to/video.extension')
 parser.add_argument('--threshold', type=float, nargs=1,
                     help='Threshold is the difference above which pixels will be marked. Higher values will make the retina less sensitive (default = 0.5).',default=[0.5])
-DynamicVisualSystemparser.add_argument('--sigma', type=float, nargs=1,
+parser.add_argument('--sigma', type=float, nargs=1,
                     help='Sigma is the standard deviation for the Gaussian blur applied to the original images. Higher values will make objects more uniform (default = 0.01)', default=[0.01])
 parser.add_argument('--max_frame', type=int, nargs=1,
                     help='If set it is the maximum number of frames which will be calculated', default=[-1])
