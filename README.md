@@ -12,4 +12,4 @@ The following packages must be installed
 scipy, matplotlib, numpy, opencv-python
 
 If you do not have them installed they can be installed using pip:
-`pip install [name_of_package]
+`pip install [name_of_package]`
