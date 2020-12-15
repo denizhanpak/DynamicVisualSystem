@@ -56,11 +56,12 @@ class Retina:
     def create_video(self,obs,vmin=0,vmax=255):
         fig = plt.figure()
         plt.axis('off')
-        img = plt.imshow(obs[0],cmap='gray', vmin=vmin, vmax=vmax)
+        print(obs.shape)
+        img = plt.imshow(obs[0,:,:,0],cmap='gray', vmin=vmin, vmax=vmax)
         frame_text = plt.text(2, 2, "Frame 0")
 
         def animate(i):
-            img.set_array(obs[i])
+            img.set_array(obs[i,:,:,0])
             frame_text.set_text(f"Frame {i}")
             return img,
         anim = animation.FuncAnimation(fig, animate,
